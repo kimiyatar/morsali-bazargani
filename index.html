@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استخدام | شرکت بازرگانی مرسلی</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #ff641f;
+    --orange-light: #ff925f;
+    --black: #101113;
+    --white: #f8f7f4;
+    --gray: #a5a5a8;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #252629;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.poster {
+    width: 100%;
+    max-width: 620px;
+    min-height: 790px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--white);
+    background:
+        radial-gradient(ellipse at 100% 5%, #572817 0%, transparent 33%),
+        radial-gradient(ellipse at 0% 100%, #332018 0%, transparent 35%),
+        linear-gradient(145deg, #191a1d, #0c0d0f 72%);
+    border: 1px solid #444347;
+    padding: 38px;
+    box-shadow: 0 35px 100px #0008;
+}
+
+/* شبکه مهندسی در پس‌زمینه */
+.poster::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image:
+        linear-gradient(#ffffff08 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    background-size: 35px 35px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+/* نور نارنجی */
+.glow {
+    position: absolute;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+    top: 180px;
+    left: -140px;
+    border-radius: 50%;
+    background: var(--orange);
+    filter: blur(140px);
+    opacity: .22;
+}
+
+.top-line {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--orange), #ffb18c);
+    margin-bottom: 28px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ffffff20;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--orange);
+    display: grid;
+    place-items: center;
+    color: var(--orange);
+    font-size: 27px;
+    font-weight: 900;
+    transform: skew(-7deg);
+}
+
+.brand-name {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.brand-caption {
+    font-size: 10px;
+    color: var(--gray);
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+
+.tag {
+    font-size: 10px;
+    border: 1px solid #ff641f70;
+    color: #ff966f;
+    border-radius: 3px;
+    padding: 7px 10px;
+    white-space: nowrap;
+}
+
+.hero {
+    padding-top: 40px;
+    position: relative;
+}
+
+.eyebrow {
+    color: var(--orange-light);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: var(--orange);
+}
+
+h1 {
+    font-size: clamp(37px, 8vw, 58px);
+    line-height: 1.5;
+    font-weight: 900;
+    margin-top: 15px;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: var(--orange);
+    display: block;
+}
+
+.subtitle {
+    color: #c1c0c3;
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 2;
+}
+
+.architecture {
+    position: relative;
+    height: 170px;
+    margin: 27px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ff641f60;
+    background: linear-gradient(180deg, #ff641f08, #ff641f02);
+}
+
+/* برج‌های هندسی */
+.building {
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #ff824d80;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 17px,
+            #ff824d48 18px 19px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 17px,
+            #ff824d48 18px 19px
+        ),
+        linear-gradient(135deg, #ff641f1c, #111214);
+    transform: skewY(-4deg);
+}
+
+.b1 {
+    width: 85px;
+    height: 100px;
+    right: 8%;
+}
+
+.b2 {
+    width: 100px;
+    height: 145px;
+    right: 26%;
+}
+
+.b3 {
+    width: 75px;
+    height: 85px;
+    right: 47%;
+}
+
+.b4 {
+    width: 110px;
+    height: 120px;
+    right: 65%;
+}
+
+.arch-line {
+    position: absolute;
+    width: 2px;
+    height: 210px;
+    background: linear-gradient(transparent, var(--orange), transparent);
+    left: 12%;
+    top: -25px;
+    transform: rotate(25deg);
+    opacity: .8;
+}
+
+.arch-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    direction: ltr;
+    color: #ff8a5b;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.description {
+    font-size: 13px;
+    line-height: 2.2;
+    color: #bdbcc0;
+    margin-bottom: 20px;
+}
+
+.description strong {
+    color: white;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 11px;
+    border: 1px solid #ffffff14;
+    background: #ffffff06;
+    font-size: 12px;
+    color: #e4e2e1;
+}
+
+.feature-icon {
+    width: 29px;
+    height: 29px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: var(--orange);
+    background: #ff641f18;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.cta {
+    position: relative;
+    padding: 21px;
+    border: 1px solid #ff641f70;
+    background: linear-gradient(110deg, #ff641f20, #ff641f06);
+}
+
+.cta-title {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.cta-text {
+    font-size: 11px;
+    color: #b9b7bb;
+    line-height: 2;
+}
+
+.contact {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.phone {
+    direction: ltr;
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+.phone span {
+    color: var(--orange);
+}
+
+.instagram {
+    direction: ltr;
+    color: #ff966f;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 17px;
+    border-top: 1px solid #ffffff1c;
+    color: #8e8d91;
+    font-size: 10px;
+}
+
+.footer strong {
+    color: #d6d3d2;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .poster {
+        padding: 24px 19px;
+        min-height: auto;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tag {
+        font-size: 9px;
+        padding: 6px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .architecture {
+        height: 135px;
+    }
+
+    .contact {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="poster">
+    <div class="glow"></div>
+    <div class="top-line"></div>
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand-icon">M</div>
+            <div>
+                <div class="brand-name">بازرگانی مرسلی</div>
+                <div class="brand-caption">MORSALI BUILDING GROUP</div>
+            </div>
+        </div>
+        <div class="tag">فرصت همکاری</div>
+    </header>
+
+    <section class="hero">
+        <div class="eyebrow">JOIN OUR CREATIVE TEAM</div>
+
+        <h1>
+            استخدام
+            <span>تولیدکننده محتوا</span>
+        </h1>
+
+        <p class="subtitle">
+            برای دنیای ساختمان، معماری و طراحی
+        </p>
+    </section>
+
+    <section class="architecture" aria-label="المان‌های معماری">
+        <div class="building b1"></div>
+        <div class="building b2"></div>
+        <div class="building b3"></div>
+        <div class="building b4"></div>
+        <div class="arch-line"></div>
+        <div class="arch-label">DESIGN · BUILD · CREATE</div>
+    </section>
+
+    <p class="description">
+        دنبال یک <strong>ذهن خلاق و خوش‌سلیقه</strong> هستیم
+        که بتواند ایده‌ها را به محتوای جذاب تبدیل کند
+        و داستان برند ما را در فضای دیجیتال روایت کند.
+    </p>
+
+    <section class="features">
+        <div class="feature">
+            <span class="feature-icon">✦</span>
+            ایده‌پردازی و خلاقیت
+        </div>
+        <div class="feature">
+            <span class="feature-icon">▣</span>
+            تولید محتوای تصویری
+        </div>
+        <div class="feature">
+            <span class="feature-icon">▶</span>
+            ساخت ریلز و ویدئو
+        </div>
+        <div class="feature">
+            <span class="feature-icon">↗</span>
+            آشنایی با اینستاگرام
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-title">وقتشه خلاقیتت رو نشون بدی!</div>
+        <p class="cta-text">
+            رزومه و نمونه‌کارت رو برای بررسی فرصت همکاری ارسال کن.
+        </p>
+
+        <div class="contact">
+            <a class="phone" href="tel:09352943589">
+                <span>✆</span> 09352943589
+            </a>
+
+            <a class="instagram"
+               href="https://instagram.com/morsali.building.group"
+               target="_blank" rel="noopener">
+                @morsali.building.group
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <strong>شرکت بازرگانی مرسلی</strong>
+        <span>BUILD YOUR IDEAS.</span>
+    </footer>
+</main>
+
+</body>
+</html>
